@@ -8,7 +8,7 @@ $smarty->compile_dir = USER_HOME_DIR . "/php/Smarty-Work-Dir/templates_c";
 $smarty->cache_dir = USER_HOME_DIR . "/php/Smarty-Work-Dir/cache";
 $smarty->config_dir = USER_HOME_DIR . "/php/Smarty-Work-Dir/configs";
 
-   //include("conn.php");
+   include("testpdo.php");
    // $dd = mysql_connect('yallara.cs.rmit.edu.au:51784', 'root', '2615347');
    // mysql_select_db("winestore", $dd) or die(mysql_error())
 
@@ -26,7 +26,7 @@ $smarty->config_dir = USER_HOME_DIR . "/php/Smarty-Work-Dir/configs";
 
 
     
-     foreach($db->query($dat)as rw)
+     foreach($db->query($dat)as $rw)
     {
 
         
@@ -40,7 +40,7 @@ $smarty->config_dir = USER_HOME_DIR . "/php/Smarty-Work-Dir/configs";
 
 
 
-     foreach($db->query($das)as rw)
+     foreach($db->query($das)as $rw)
     {
 
         $temp2[]=$rw[0];
@@ -51,7 +51,7 @@ $smarty->config_dir = USER_HOME_DIR . "/php/Smarty-Work-Dir/configs";
 
 
 
-     foreach($db->query($dae)as rw)
+     foreach($db->query($dae)as $rw)
     {
 
         
